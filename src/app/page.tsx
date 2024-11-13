@@ -39,7 +39,7 @@ export default function Home() {
         Admin
       </Button>
       <Button variant="contained" onClick={() => router.push(PageRoutes.Profile)}>
-        Admin
+        Profile
       </Button>
     </Box>
   );
