@@ -1,4 +1,3 @@
-
 ## Folder Description
 
 - **app/**: Contains the main route structure using Next.js App Router.
@@ -9,7 +8,6 @@
 - **types/**: Type and interface definitions for TypeScript.
 - **hooks/**: Custom React hooks for shared logic.
 - **services/**: Contains business logic, such as authentication and other services.
-
 
 ## Scripts:
 
@@ -23,4 +21,3 @@
 
 - **Icons page:** https://icon-sets.iconify.design/
 - **Documentation:** https://iconify.design/docs/icon-components/react/
-
