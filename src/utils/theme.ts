@@ -47,20 +47,20 @@ const theme = createTheme({
     },
     h3: {
       fontFamily: FONT_FAMILY,
-      fontSize: "18px",
-      fontWeight: 500,
+      fontSize: "20px",
+      fontWeight: 600,
     },
-    h4: { fontFamily: FONT_FAMILY },
-    h5: { fontFamily: FONT_FAMILY },
-    h6: { fontFamily: FONT_FAMILY },
+    h4: { fontFamily: FONT_FAMILY, fontWeight: 600 },
+    h5: { fontFamily: FONT_FAMILY, fontWeight: 600 },
+    h6: { fontFamily: FONT_FAMILY, fontWeight: 600 },
     body1: {
       fontFamily: FONT_FAMILY,
-      fontSize: "16px",
+      fontSize: "18px",
       fontWeight: 400,
     },
     body2: {
       fontFamily: FONT_FAMILY,
-      fontSize: "14px",
+      fontSize: "16px",
       fontWeight: 300,
     },
     subtitle1: {
@@ -70,17 +70,17 @@ const theme = createTheme({
     },
     subtitle2: {
       fontFamily: FONT_FAMILY,
-      fontSize: "16px",
+      fontSize: "18px",
       fontWeight: 500,
     },
     caption: {
       fontFamily: FONT_FAMILY,
-      fontSize: "12px",
+      fontSize: "14px",
       fontWeight: 300,
     },
     button: {
       fontFamily: FONT_FAMILY,
-      fontSize: "16px",
+      fontSize: "18px",
       fontWeight: 500,
     },
   },
