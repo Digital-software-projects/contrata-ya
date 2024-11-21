@@ -1,4 +1,21 @@
-import "../styles/globals.css";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/utils/theme";
+import { Container, CssBaseline } from "@mui/material";
+
+const openSansFont = localFont({
+  src: "../assets/fonts/OpenSans.woff2",
+  variable: "--font-open-sans",
+  weight: "300 400 500 600 700",
+});
+
+export const metadata: Metadata = {
+  title: "ContrataYa - Donde tus proyectos cobran vida",
+  description:
+    "Encuentra el talento perfecto para hacer realidad tus proyectos",
+};
 
 export default function RootLayout({
   children,
@@ -6,8 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="es">
+      <body className={`${openSansFont.variable}}`}>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {/* HEADER */}
+            <Container>{children}</Container>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
