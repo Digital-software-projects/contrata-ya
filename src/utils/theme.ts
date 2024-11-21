@@ -1,6 +1,6 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
-import { COLORS } from "./constants";
+import { COLORS, FONT_FAMILY } from "./constants";
 
 const theme = createTheme({
   palette: {
@@ -33,14 +33,56 @@ const theme = createTheme({
       wordWrap: "break-word",
       wordBreak: "break-word",
     },
-    fontFamily: "'Open Sans', sans-serif",
-    fontSize: 18,
-    h1: { fontFamily: "'Open Sans', sans-serif" },
-    h2: { fontFamily: "'Open Sans', sans-serif" },
-    h3: { fontFamily: "'Open Sans', sans-serif" },
-    h4: { fontFamily: "'Open Sans', sans-serif" },
-    h5: { fontFamily: "'Open Sans', sans-serif" },
-    h6: { fontFamily: "'Open Sans', sans-serif" },
+    fontFamily: FONT_FAMILY,
+    fontSize: 16,
+    h1: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "36px",
+      fontWeight: 600,
+    },
+    h2: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "24px",
+      fontWeight: 600,
+    },
+    h3: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "18px",
+      fontWeight: 500,
+    },
+    h4: { fontFamily: FONT_FAMILY },
+    h5: { fontFamily: FONT_FAMILY },
+    h6: { fontFamily: FONT_FAMILY },
+    body1: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "16px",
+      fontWeight: 400,
+    },
+    body2: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "14px",
+      fontWeight: 300,
+    },
+    subtitle1: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "18px",
+      fontWeight: 600,
+    },
+    subtitle2: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "16px",
+      fontWeight: 500,
+    },
+    caption: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "12px",
+      fontWeight: 300,
+    },
+    button: {
+      fontFamily: FONT_FAMILY,
+      fontSize: "16px",
+      fontWeight: 500,
+    },
   },
   components: {
     MuiContainer: {

@@ -17,3 +17,5 @@ export const COLORS = {
   BLACK: "#000",
   WHITE: "#FFF",
 };
+
+export const FONT_FAMILY = "'Open Sans', sans-serif";
