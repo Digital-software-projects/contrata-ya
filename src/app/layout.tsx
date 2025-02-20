@@ -29,7 +29,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             {/* HEADER */}
-            <Container>{children}</Container>
+            <Container maxWidth={false}>{children}</Container>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

@@ -1,7 +1,7 @@
 export const COLORS = {
   PRIMARY_MAIN: "#595FD9",
   PRIMARY_LIGHT: "#60A5FA",
-  PRIMARY_DARK: "#2A5973",
+  PRIMARY_DARK: "#3d4090",
 
   SECONDARY_MAIN: "#16A34A",
   SECONDARY_LIGHT: "#66BB6A",
@@ -9,6 +9,7 @@ export const COLORS = {
   BACKGROUND_DEFAULT: "#FFF",
   BG_FOCUSED: "#C4CBDF",
   BG_GREY: "#8080808C",
+  BG_LIGHT_GREY: "F9F9F9",
 
   SUCCESS_MAIN: "#03FC6B",
   WARNING_MAIN: "#E9DF00",
@@ -16,6 +17,9 @@ export const COLORS = {
 
   BLACK: "#000",
   WHITE: "#FFF",
+  GREY: "#666",
+  LG_GREY: "#DDD",
+  EXTRA_LG_GREY: "#888"
 };
 
 export const FONT_FAMILY = "'Open Sans', sans-serif";

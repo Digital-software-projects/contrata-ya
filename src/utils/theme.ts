@@ -86,10 +86,19 @@ const theme = createTheme({
   },
   components: {
     MuiContainer: {
+      defaultProps: {
+        disableGutters: true,
+      },
       styleOverrides: {
         root: {
-          overflowX: "hidden",
-          marginTop: 24,
+          margin: 0,
+          padding: "24px 10%",
+          width: "100vw",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         },
       },
     },
@@ -104,11 +113,20 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           paddingLeft: "60px",
           paddingRight: "60px",
           borderRadius: "18px",
           fontWeight: 500,
+          [theme.breakpoints.up("xs")]: {
+            fontSize: 18,
+          },
+          [theme.breakpoints.up("md")]: {
+            fontSize: 20,
+          },
+          [theme.breakpoints.up("lg")]: {
+            fontSize: 22,
+          },
           textTransform: "capitalize",
           "&.MuiButton-contained": {
             backgroundColor: COLORS.PRIMARY_MAIN,
@@ -131,30 +149,44 @@ const theme = createTheme({
               color: COLORS.PRIMARY_DARK,
             },
           },
-        },
+        }),
       },
     },
     MuiTextField: {
+      defaultProps: {
+        variant: "outlined",
+      },
       styleOverrides: {
         root: {
-          backgroundColor: COLORS.BG_GREY,
+          "& .MuiInputLabel-root": {
+            color: COLORS.GREY,
+            fontSize: "16px",
+          },
+          "& .MuiInputBase-input": {
+            color: COLORS.BLACK,
+            fontSize: "16px",
+          },
           "& .MuiOutlinedInput-root": {
+            borderRadius: "12px",
+            backgroundColor: COLORS.BG_LIGHT_GREY,
             "& fieldset": {
-              borderColor: COLORS.PRIMARY_MAIN,
+              borderColor: COLORS.LG_GREY,
             },
             "&:hover fieldset": {
-              borderColor: COLORS.PRIMARY_DARK,
+              borderColor: COLORS.EXTRA_LG_GREY,
             },
             "&.Mui-focused fieldset": {
-              borderColor: COLORS.PRIMARY_DARK,
+              borderColor: COLORS.PRIMARY_MAIN,
             },
-            "& .MuiInputBase-input": {
-              color: COLORS.BLACK,
+            "& .MuiInputAdornment-root": {
+              paddingLeft: "10px", 
+              paddingRight: "10px",
             },
           },
         },
       },
     },
+
     MuiFormHelperText: {
       styleOverrides: {
         root: {
