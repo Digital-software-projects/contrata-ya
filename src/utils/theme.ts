@@ -179,7 +179,7 @@ const theme = createTheme({
               borderColor: COLORS.PRIMARY_MAIN,
             },
             "& .MuiInputAdornment-root": {
-              paddingLeft: "10px", 
+              paddingLeft: "10px",
               paddingRight: "10px",
             },
           },
@@ -388,6 +388,19 @@ const theme = createTheme({
           },
           "&:hover": {
             backgroundColor: COLORS.WHITE,
+          },
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: COLORS.PRIMARY_DARK + " !important",
+          textDecoration: "none",
+          cursor: "pointer",
+          "&:hover": {
+            color: COLORS.PRIMARY_LIGHT, 
+            textDecoration: "underline",
           },
         },
       },
