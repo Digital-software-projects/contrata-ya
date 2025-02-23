@@ -1,6 +1,6 @@
 "use client";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
-import { useState } from "react";
+import { ChangeEventHandler, useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const InputField = ({
@@ -8,11 +8,15 @@ const InputField = ({
   type,
   icon,
   placeholder,
+  value,
+  onChange,
 }: {
   label: string;
   type: string;
   icon?: JSX.Element;
   placeholder?: string;
+  value: string;
+  onChange: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -23,6 +27,8 @@ const InputField = ({
       label={label}
       variant="outlined"
       fullWidth
+      value={value}
+      onChange={onChange}
       placeholder={placeholder}
       type={type === "password" && showPassword ? "text" : type}
       slotProps={{
