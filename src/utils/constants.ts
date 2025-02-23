@@ -19,7 +19,7 @@ export const COLORS = {
   WHITE: "#FFF",
   GREY: "#666",
   LG_GREY: "#DDD",
-  EXTRA_LG_GREY: "#888"
+  EXTRA_LG_GREY: "#888",
 };
 
 export const FONT_FAMILY = "'Open Sans', sans-serif";

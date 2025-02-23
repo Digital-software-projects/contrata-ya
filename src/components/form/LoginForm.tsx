@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { Button, Typography, Box, Link } from "@mui/material";
 import { Lock, Email } from "@mui/icons-material";
@@ -18,8 +18,8 @@ const LoginForm = () => {
 
     try {
       await loginWithEmail(email, password);
-    } catch (err: any) {
-      setError(err.message);
+    } catch {
+      setError("Hubo un error. Por favor, intenta de nuevo.");
     } finally {
       setLoading(false);
     }
@@ -31,8 +31,8 @@ const LoginForm = () => {
 
     try {
       await loginWithGoogle();
-    } catch (err: any) {
-      setError(err.message);
+    } catch {
+      setError("Hubo un error. Por favor, intenta de nuevo");
     } finally {
       setLoading(false);
     }

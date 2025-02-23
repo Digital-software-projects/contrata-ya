@@ -19,8 +19,8 @@ export const loginWithEmail = async (email: string, password: string) => {
       password
     );
     return userCredential.user;
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch {
+    throw new Error();
   }
 };
 
@@ -33,12 +33,10 @@ export const loginWithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
 
-    // Check if user exists in Firestore
     const userRef = doc(db, "users", user.uid);
     const userSnap = await getDoc(userRef);
 
     if (!userSnap.exists()) {
-      // Create new user document
       await setDoc(userRef, {
         uid: user.uid,
         name: user.displayName,
@@ -49,7 +47,7 @@ export const loginWithGoogle = async () => {
     }
 
     return user;
-  } catch (error: any) {
-    throw new Error(error.message);
+  } catch {
+    throw new Error();
   }
 };

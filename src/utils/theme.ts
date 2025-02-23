@@ -399,7 +399,7 @@ const theme = createTheme({
           textDecoration: "none",
           cursor: "pointer",
           "&:hover": {
-            color: COLORS.PRIMARY_LIGHT, 
+            color: COLORS.PRIMARY_LIGHT,
             textDecoration: "underline",
           },
         },
