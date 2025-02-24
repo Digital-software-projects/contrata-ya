@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/utils/theme";
 import { Container, CssBaseline } from "@mui/material";
+import { AuthProvider } from "@/context/AuthContext";
 
 const openSansFont = localFont({
   src: "../assets/fonts/OpenSans.woff2",
@@ -25,13 +26,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${openSansFont.variable}}`}>
-        <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            {/* HEADER */}
-            <Container>{children}</Container>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
+        <AuthProvider>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              {/* HEADER */}
+              <Container maxWidth={false}>{children}</Container>
+            </ThemeProvider>
+          </AppRouterCacheProvider>
+        </AuthProvider>
       </body>
     </html>
   );
