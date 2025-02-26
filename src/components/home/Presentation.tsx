@@ -1,8 +1,8 @@
-import { Typography, Box, Container } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { styled } from "@mui/system";
 import Subtitle from "../typography/Subtitle";
 
-const VideoContainer = styled(Box)(({ theme }) => ({
+const VideoContainer = styled(Box)(() => ({
   position: "relative",
   width: "100%",
   maxWidth: "700px",

@@ -22,7 +22,7 @@ const WorkersFinder = () => {
       <Typography
         variant="body1"
         color="textSecondary"
-        sx={{  maxWidth: 928, margin: "0 auto" }}
+        sx={{ maxWidth: 928, margin: "0 auto" }}
       >
         Conectamos tus ideas con profesionales expertos verificados. Una
         comunidad de talentos especializados listos para llevar tu proyecto al
