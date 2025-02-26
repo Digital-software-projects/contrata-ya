@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { TextField, MenuItem, Button, Typography } from "@mui/material";
+import { TextField, MenuItem, Button, Typography, Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Grid from "@mui/material/Grid2";
 import CategoriesGrid from "../categories/CategoriesGrid";
 import { locations } from "@/types/Locations";
+import Title from "../typography/Title";
 
 const WorkersFinder = () => {
   const [search, setSearch] = useState("");
@@ -14,18 +15,18 @@ const WorkersFinder = () => {
   };
 
   return (
-    <div
-      style={{ textAlign: "center", maxWidth: "100vw", overflowX: "hidden" }}
-    >
-      <Typography variant="h4" fontWeight="bold" gutterBottom>
+    <Box sx={{ textAlign: "center", maxWidth: "100vw", overflowX: "hidden" }}>
+      <Title>
         Encuentra el talento perfecto para hacer realidad tus proyectos
-      </Typography>
+      </Title>
       <Typography
         variant="body1"
         color="textSecondary"
-        sx={{ marginBottom: 4 }}
+        sx={{  maxWidth: 928, margin: "0 auto" }}
       >
-        Conectamos tus ideas con profesionales expertos verificados.
+        Conectamos tus ideas con profesionales expertos verificados. Una
+        comunidad de talentos especializados listos para llevar tu proyecto al
+        siguiente nivel.
       </Typography>
 
       <Grid
@@ -33,7 +34,7 @@ const WorkersFinder = () => {
         spacing={2}
         justifyContent="center"
         alignItems={"center"}
-        sx={{ marginBottom: 5 }}
+        sx={{ marginBottom: 8, marginTop: 4 }}
       >
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <TextField
@@ -84,7 +85,7 @@ const WorkersFinder = () => {
       </Grid>
 
       <CategoriesGrid />
-    </div>
+    </Box>
   );
 };
 
