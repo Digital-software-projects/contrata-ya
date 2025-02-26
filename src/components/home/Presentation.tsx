@@ -22,7 +22,14 @@ const Iframe = styled("iframe")({
 
 const Presentation = () => {
   return (
-    <Box sx={{ textAlign: "center", py: 4, maxWidth: "100vw", marginTop: 12 }}>
+    <Box
+      sx={{
+        textAlign: "center",
+        py: 4,
+        maxWidth: "100vw",
+        marginTop: { md: 12, xs: 4 },
+      }}
+    >
       <Subtitle>Descubre cómo Contrata Ya puede ayudarte</Subtitle>
       <Typography
         variant="body1"
@@ -37,9 +44,6 @@ const Presentation = () => {
           {" "}
           conecta a contratadores con los mejores trabajadores.
         </Box>{" "}
-        Desde la creación de tu perfil hasta la gestión de proyectos, te
-        mostramos cómo aprovechar al máximo todas las funcionalidades que
-        ofrecemos para hacer crecer tu negocio.
       </Typography>
       <Box
         mt={4}
