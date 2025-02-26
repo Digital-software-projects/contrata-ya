@@ -1,6 +1,6 @@
 export const COLORS = {
   PRIMARY_MAIN: "#595FD9",
-  PRIMARY_LIGHT: "#60A5FA",
+  PRIMARY_LIGHT: "#43455d",
   PRIMARY_DARK: "#3d4090",
 
   SECONDARY_MAIN: "#16A34A",
@@ -20,6 +20,9 @@ export const COLORS = {
   GREY: "#666",
   LG_GREY: "#DDD",
   EXTRA_LG_GREY: "#888",
+
+  DARK_333: "#333",
+  DARK_555: "#555"
 };
 
 export const FONT_FAMILY = "'Open Sans', sans-serif";

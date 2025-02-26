@@ -93,7 +93,10 @@ const theme = createTheme({
         root: {
           margin: 0,
           padding: "24px 10%",
+          paddingTop: 32,
           width: "100vw",
+          maxWidth: "100vw",
+          overflowX: "hidden",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -139,8 +142,8 @@ const theme = createTheme({
             borderColor: COLORS.PRIMARY_MAIN,
             color: COLORS.BLACK,
             "&:hover": {
-              borderColor: COLORS.PRIMARY_DARK,
-              backgroundColor: COLORS.BG_GREY,
+              backgroundColor: COLORS.PRIMARY_MAIN,
+              color: COLORS.WHITE
             },
           },
           "&.MuiButton-text": {

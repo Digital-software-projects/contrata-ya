@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/utils/theme";
 import { Container, CssBaseline } from "@mui/material";
 import { AuthProvider } from "@/context/AuthContext";
+import Header from "@/components/header/Header";
 
 const openSansFont = localFont({
   src: "../assets/fonts/OpenSans.woff2",
@@ -31,6 +32,7 @@ export default function RootLayout({
             <ThemeProvider theme={theme}>
               <CssBaseline />
               {/* HEADER */}
+              <Header />
               <Container maxWidth={false}>{children}</Container>
             </ThemeProvider>
           </AppRouterCacheProvider>
