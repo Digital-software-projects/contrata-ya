@@ -22,7 +22,7 @@ export const COLORS = {
   EXTRA_LG_GREY: "#888",
 
   DARK_333: "#333",
-  DARK_555: "#555"
+  DARK_555: "#555",
 };
 
 export const FONT_FAMILY = "'Open Sans', sans-serif";

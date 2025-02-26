@@ -12,7 +12,6 @@ import {
   ListItemButton,
   ListItemText,
   ListItemIcon,
-  Avatar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";

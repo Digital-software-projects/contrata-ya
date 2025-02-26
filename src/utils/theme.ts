@@ -143,7 +143,7 @@ const theme = createTheme({
             color: COLORS.BLACK,
             "&:hover": {
               backgroundColor: COLORS.PRIMARY_MAIN,
-              color: COLORS.WHITE
+              color: COLORS.WHITE,
             },
           },
           "&.MuiButton-text": {
