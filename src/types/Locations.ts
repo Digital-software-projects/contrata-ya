@@ -14,4 +14,5 @@ export const locations = [
   Locations.CochabambaBolivia,
   Locations.SantaCruzBolivia,
   Locations.LaPazBolivia,
+  "Cualquiera",
 ];
