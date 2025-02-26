@@ -90,10 +90,16 @@ const theme = createTheme({
         disableGutters: true,
       },
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           margin: 0,
           padding: "24px 10%",
           paddingTop: 32,
+          [theme.breakpoints.down("sm")]: {
+            marginTop: 48,
+          },
+          [theme.breakpoints.up("md")]: {
+            marginTop: 0,
+          },
           width: "100vw",
           maxWidth: "100vw",
           overflowX: "hidden",
@@ -102,7 +108,7 @@ const theme = createTheme({
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-        },
+        }),
       },
     },
     MuiCard: {

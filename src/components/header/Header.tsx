@@ -30,6 +30,7 @@ const Header = () => {
   const { user } = useAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const nonVisibleHeaderPaths = [PageRoutes.Login, PageRoutes.SignUp];
 
   const menuItems = useMemo(
     () => [
@@ -64,81 +65,93 @@ const Header = () => {
     ));
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        backgroundColor: "#fff",
-        boxShadow: "none",
-        borderBottom: "1px solid #ddd",
-        padding: { xs: "0 5%", md: "0 10%" },
-      }}
-    >
-      <Toolbar
-        sx={{ display: "flex", justifyContent: "space-between", padding: 0 }}
-      >
-        <Typography
-          component={Link}
-          href="/"
-          variant="h6"
-          sx={{ color: "#202020", fontWeight: 600, textDecoration: "none" }}
+    <>
+      {nonVisibleHeaderPaths.includes(pathname) ? (
+        <></>
+      ) : (
+        <AppBar
+          position="fixed"
+          sx={{
+            backgroundColor: "#fff",
+            boxShadow: "none",
+            borderBottom: "1px solid #ddd",
+            padding: { xs: "0 5%", md: "0 10%" },
+          }}
         >
-          Contrata Ya
-        </Typography>
-
-        <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6 }}>
-          {menuItems.map((item) => (
-            <Link
-              key={item.text}
-              href={item.href}
-              passHref
-              style={{
-                color:
-                  pathname === item.href
-                    ? COLORS.PRIMARY_MAIN
-                    : COLORS.PRIMARY_LIGHT,
-                display: "flex",
-                alignItems: "center",
-                textDecoration: "none",
-                gap: 10,
-              }}
-            >
-              {item.icon}
-              {item.text}
-            </Link>
-          ))}
-        </Box>
-
-        {user ? <ProfileButton onClick={toggleDrawer} /> : <LoginButton />}
-
-        <IconButton
-          sx={{ display: { xs: "block", md: "none" } }}
-          onClick={toggleDrawer}
-        >
-          <MenuIcon />
-        </IconButton>
-
-        <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
-          <Box
+          <Toolbar
             sx={{
-              width: 250,
               display: "flex",
-              flexDirection: "column",
-              height: "100%",
+              justifyContent: "space-between",
+              padding: 0,
             }}
           >
-            <List sx={{ flexGrow: 1 }}>{renderMenuItems(toggleDrawer)}</List>
+            <Typography
+              component={Link}
+              href="/"
+              variant="h6"
+              sx={{ color: "#202020", fontWeight: 600, textDecoration: "none" }}
+            >
+              Contrata Ya
+            </Typography>
 
-            <Box sx={{ display: "flex", justifyContent: "center", p: 2 }}>
-              {user ? (
-                <ProfileButton onClick={toggleDrawer} />
-              ) : (
-                <LoginButton isSmall />
-              )}
+            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6 }}>
+              {menuItems.map((item) => (
+                <Link
+                  key={item.text}
+                  href={item.href}
+                  passHref
+                  style={{
+                    color:
+                      pathname === item.href
+                        ? COLORS.PRIMARY_MAIN
+                        : COLORS.PRIMARY_LIGHT,
+                    display: "flex",
+                    alignItems: "center",
+                    textDecoration: "none",
+                    gap: 10,
+                  }}
+                >
+                  {item.icon}
+                  {item.text}
+                </Link>
+              ))}
             </Box>
-          </Box>
-        </Drawer>
-      </Toolbar>
-    </AppBar>
+
+            {user ? <ProfileButton onClick={toggleDrawer} /> : <LoginButton />}
+
+            <IconButton
+              sx={{ display: { xs: "block", md: "none" } }}
+              onClick={toggleDrawer}
+            >
+              <MenuIcon />
+            </IconButton>
+
+            <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
+              <Box
+                sx={{
+                  width: 250,
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                }}
+              >
+                <List sx={{ flexGrow: 1 }}>
+                  {renderMenuItems(toggleDrawer)}
+                </List>
+
+                <Box sx={{ display: "flex", justifyContent: "center", p: 2 }}>
+                  {user ? (
+                    <ProfileButton onClick={toggleDrawer} />
+                  ) : (
+                    <LoginButton isSmall />
+                  )}
+                </Box>
+              </Box>
+            </Drawer>
+          </Toolbar>
+        </AppBar>
+      )}
+    </>
   );
 };
 

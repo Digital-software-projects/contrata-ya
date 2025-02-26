@@ -3,6 +3,7 @@ export const PageRoutes = {
   Profile: "/perfil",
   Admin: "/admin",
   Login: "/login",
+  SignUp: "/registro",
   Projects: "/proyectos",
   Notifications: "/notificaciones",
   Search: "/buscar",
