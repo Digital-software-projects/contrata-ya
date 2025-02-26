@@ -3,8 +3,7 @@ import { TextField, MenuItem, Button, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Grid from "@mui/material/Grid2";
 import CategoriesGrid from "../categories/CategoriesGrid";
-
-const cities = ["Cochabamba", "La Paz", "Santa Cruz"];
+import { locations } from "@/types/Locations";
 
 const WorkersFinder = () => {
   const [search, setSearch] = useState("");
@@ -65,7 +64,7 @@ const WorkersFinder = () => {
             <MenuItem value="" disabled>
               Selecciona tu ciudad
             </MenuItem>
-            {cities.map((c) => (
+            {locations.map((c) => (
               <MenuItem key={c} value={c}>
                 {c}
               </MenuItem>

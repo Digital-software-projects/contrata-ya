@@ -1,32 +1,6 @@
+import { categories } from "@/utils/data";
 import { Card, CardMedia, Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-
-const categories = [
-  { name: "Marketing", image: "/images/marketing.jpg" },
-  { name: "Software", image: "/images/software.jpg" },
-  { name: "Diseño Gráfico", image: "/images/design.jpg" },
-  {
-    name: "Finanzas y Contabilidad",
-    image: "/images/accounting.jpg",
-  },
-  {
-    name: "Arquitectura",
-    image: "/images/architecture.jpg",
-  },
-  {
-    name: "Ingeniería",
-    image: "/images/engineriing.jpg",
-  },
-  {
-    name: "Fotografía",
-    image: "/images/photo.jpg",
-  },
-
-  {
-    name: "Redacción y Traducción",
-    image: "/images/typing.jpg",
-  },
-];
 
 const CategoriesGrid = () => {
   return (
