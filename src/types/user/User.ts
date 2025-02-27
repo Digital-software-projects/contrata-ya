@@ -1,5 +1,6 @@
 import { Timestamp } from "firebase/firestore";
 import { ImageRef, MediaItem } from "../Media";
+import { Locations } from "../Locations";
 
 /**
  * Interface representing a user in the app, which could also be an organization or individual.
@@ -37,6 +38,7 @@ export interface User {
    * workers or understand the platform. The referral system includes the referrer code, tracking for
    * commissions, and information about referred users or projects.
    */
+  location?: Locations;
 }
 
 /**

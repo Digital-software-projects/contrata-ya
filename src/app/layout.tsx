@@ -31,7 +31,6 @@ export default function RootLayout({
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              {/* HEADER */}
               <Header />
               <Container maxWidth={false}>{children}</Container>
             </ThemeProvider>
