@@ -17,7 +17,7 @@ const LoginPage = () => {
         >
           <LoginForm />
         </Grid>
-        <Grid size={{ lg: 6, md: 12 }}>
+        <Grid size={{ lg: 6, md: 0 }}>
           <Box
             component="img"
             src="/auth-image.png"
