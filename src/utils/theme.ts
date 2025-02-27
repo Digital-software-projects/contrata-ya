@@ -47,7 +47,7 @@ const theme = createTheme({
     },
     h3: {
       fontFamily: FONT_FAMILY,
-      fontSize: "20px",
+      // fontSize: "20px",
       fontWeight: 600,
     },
     h4: { fontFamily: FONT_FAMILY, fontWeight: 600 },
@@ -93,14 +93,17 @@ const theme = createTheme({
         root: ({ theme }) => ({
           margin: 0,
           padding: "24px 10%",
-          paddingTop: 32,
+          paddingTop: "32px",
           [theme.breakpoints.down("sm")]: {
             marginTop: 48,
           },
           [theme.breakpoints.up("md")]: {
             marginTop: 0,
           },
-          width: "100vw",
+          [theme.breakpoints.up("lg")]: {
+            marginTop: 0,
+          },
+          width: "100%",
           maxWidth: "100vw",
           overflowX: "hidden",
           minHeight: "100vh",
