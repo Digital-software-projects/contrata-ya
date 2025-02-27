@@ -9,7 +9,7 @@ import {
   UserPricing,
   UserService,
 } from "./User";
-import { Currency } from "firebase/analytics";
+import { Currency } from "../admin/PaymentDetails";
 
 /**
  * Details for a worker user.
