@@ -101,7 +101,7 @@ const Header = () => {
               src="/images/logo/horizontal-logo.png"
               alt="Logo"
               sx={{
-                width: 200,
+                width: { xs: 140, sm: 140, md: 200, lg: 200 },
               }}
             />
 
