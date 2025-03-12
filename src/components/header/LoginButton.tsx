@@ -17,7 +17,11 @@ const LoginButton: React.FC<LoginButtonProps> = ({ isSmall = false }) => {
       color="primary"
       sx={{
         fontSize: { xs: 15, md: 16 },
-        display: { xs: isSmall ? "block" : "none", md: "block" },
+        display: {
+          xs: isSmall ? "block" : "none",
+          md: isSmall ? "block" : "none",
+          lg: "block",
+        },
         color: COLORS.PRIMARY_MAIN,
       }}
     >

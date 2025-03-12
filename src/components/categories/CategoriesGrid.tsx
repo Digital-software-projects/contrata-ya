@@ -6,7 +6,7 @@ const CategoriesGrid = () => {
   return (
     <Grid container spacing={2} justifyContent="center">
       {categories.map((category) => (
-        <Grid size={{ xs: 12, sm: 6, md: 3 }} key={category.name}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }} key={category.name}>
           <Card
             sx={{
               position: "relative",

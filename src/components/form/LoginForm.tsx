@@ -46,10 +46,28 @@ const LoginForm = () => {
       justifyContent="center"
       sx={{ width: "100%" }}
     >
-      <Typography variant="h4" fontWeight={600} textAlign="center" gutterBottom>
-        Bienvenid@ a <br /> ContrataYa
+      <Typography variant="h4" fontWeight={600} textAlign="center" >
+        Bienvenid@ a
       </Typography>
-      <Typography textAlign="center" mb={3}>
+      <Box
+        component="img"
+        src="/images/logo/horizontal-logo.png"
+        alt="Logo"
+        sx={{
+          width: 300,
+          display: { xs: "none", md: "none", lg: "block" },
+        }}
+      />
+      <Box
+        component="img"
+        src="/images/logo/char-horizontal-logo.png"
+        alt="Logo"
+        sx={{
+          width: 300,
+          display: { xs: "block", md: "block", lg: "none" },
+        }}
+      />
+      <Typography textAlign="center" mb={3} mt={2}>
         Conectamos talento con oportunidades
       </Typography>
 
