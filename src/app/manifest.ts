@@ -1,3 +1,4 @@
+import { COLORS } from "@/utils/constants";
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -7,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Donde tus proyectos cobran vida",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#000000",
+    background_color: COLORS.WHITE,
+    theme_color: COLORS.PRIMARY_MAIN,
     icons: [
       {
         src: "/images/icon/icon.png",
