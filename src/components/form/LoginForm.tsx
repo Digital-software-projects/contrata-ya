@@ -46,7 +46,7 @@ const LoginForm = () => {
       justifyContent="center"
       sx={{ width: "100%" }}
     >
-      <Typography variant="h4" fontWeight={600} textAlign="center" >
+      <Typography variant="h4" fontWeight={600} textAlign="center">
         Bienvenid@ a
       </Typography>
       <Box
