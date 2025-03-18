@@ -36,7 +36,7 @@ const WorkersFinder = () => {
         alignItems={"center"}
         sx={{ marginBottom: 8, marginTop: 4 }}
       >
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4 }}>
           <TextField
             fullWidth
             variant="outlined"
@@ -53,7 +53,7 @@ const WorkersFinder = () => {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 3, md: 2 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 3 }}>
           <TextField
             select
             fullWidth
@@ -72,7 +72,7 @@ const WorkersFinder = () => {
             ))}
           </TextField>
         </Grid>
-        <Grid size={{ xs: 12, sm: 2 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 3 }}>
           <Button
             fullWidth
             variant="contained"

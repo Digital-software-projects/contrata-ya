@@ -57,7 +57,18 @@ const Header = () => {
   const renderMenuItems = (onClick?: () => void) =>
     menuItems.map((item) => (
       <ListItem key={item.text} disablePadding>
-        <ListItemButton component={Link} href={item.href} onClick={onClick}>
+        <ListItemButton
+          sx={{
+            color: pathname === item.href ? COLORS.PRIMARY_DARK : COLORS.BLACK,
+            "& .MuiListItemIcon-root": {
+              color:
+                pathname === item.href ? COLORS.PRIMARY_DARK : COLORS.BLACK,
+            },
+          }}
+          component={Link}
+          href={item.href}
+          onClick={onClick}
+        >
           <ListItemIcon>{item.icon}</ListItemIcon>
           <ListItemText primary={item.text} />
         </ListItemButton>
@@ -85,34 +96,43 @@ const Header = () => {
               padding: 0,
             }}
           >
-            <Typography
-              component={Link}
-              href="/"
-              variant="h6"
-              sx={{ color: "#202020", fontWeight: 600, textDecoration: "none" }}
-            >
-              Contrata Ya
-            </Typography>
+            <Box
+              component="img"
+              src="/images/logo/horizontal-logo.png"
+              alt="Logo"
+              sx={{
+                width: { xs: 140, sm: 140, md: 200, lg: 200 },
+              }}
+            />
 
-            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6 }}>
+            <Box
+              sx={{ display: { xs: "none", md: "none", lg: "flex" }, gap: 6 }}
+            >
               {menuItems.map((item) => (
                 <Link
                   key={item.text}
                   href={item.href}
                   passHref
-                  style={{
-                    color:
-                      pathname === item.href
-                        ? COLORS.PRIMARY_MAIN
-                        : COLORS.PRIMARY_LIGHT,
-                    display: "flex",
-                    alignItems: "center",
-                    textDecoration: "none",
-                    gap: 10,
-                  }}
+                  style={{ textDecoration: "none" }}
                 >
-                  {item.icon}
-                  {item.text}
+                  <Box
+                    sx={{
+                      color:
+                        pathname === item.href
+                          ? COLORS.PRIMARY_DARK
+                          : COLORS.BLACK,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 2,
+                      transition: "color 0.3s ease-in-out",
+                      "&:hover": {
+                        color: COLORS.PRIMARY_DARK,
+                      },
+                    }}
+                  >
+                    {item.icon}
+                    <Typography>{item.text}</Typography>
+                  </Box>
                 </Link>
               ))}
             </Box>
@@ -120,7 +140,7 @@ const Header = () => {
             {user ? <ProfileButton onClick={toggleDrawer} /> : <LoginButton />}
 
             <IconButton
-              sx={{ display: { xs: "block", md: "none" } }}
+              sx={{ display: { md: "block", lg: "none" } }}
               onClick={toggleDrawer}
             >
               <MenuIcon />

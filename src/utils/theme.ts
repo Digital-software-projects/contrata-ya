@@ -142,7 +142,7 @@ const theme = createTheme({
           textTransform: "capitalize",
           "&.MuiButton-contained": {
             backgroundColor: COLORS.PRIMARY_MAIN,
-            color: "#fff",
+            color: COLORS.BLACK,
             "&:hover": {
               backgroundColor: COLORS.PRIMARY_DARK,
             },
@@ -152,7 +152,7 @@ const theme = createTheme({
             color: COLORS.BLACK,
             "&:hover": {
               backgroundColor: COLORS.PRIMARY_MAIN,
-              color: COLORS.WHITE,
+              color: COLORS.BLACK,
             },
           },
           "&.MuiButton-text": {

@@ -27,10 +27,19 @@ const Presentation = () => {
         textAlign: "center",
         py: 4,
         maxWidth: "100vw",
-        marginTop: { md: 12, xs: 4 },
+        marginTop: { md: 2, xs: 2 },
       }}
     >
-      <Subtitle>Descubre cómo Contrata Ya puede ayudarte</Subtitle>
+      <Box
+        component="img"
+        src="/images/character/sit.png"
+        alt="Character"
+        sx={{
+          width: 240,
+          objectFit: "contain",
+        }}
+      />
+      <Subtitle>Descubre cómo ContrataYa puede ayudarte</Subtitle>
       <Typography
         variant="body1"
         sx={{ maxWidth: "1000px", margin: "0 auto" }}
@@ -39,7 +48,7 @@ const Presentation = () => {
         Aprende paso a paso cómo nuestra plataforma
         <Box
           component="span"
-          sx={{ color: "primary.main", fontWeight: "bold" }}
+          sx={{ color: "primary.dark", fontWeight: "bold" }}
         >
           {" "}
           conecta a contratadores con los mejores trabajadores.
